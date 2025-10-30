@@ -1,0 +1,302 @@
+[
+  {
+    "id": "LP_001",
+    "name": "Ladepunkt 001",
+    "status": "charging",
+    "power": 1.2
+  },
+  {
+    "id": "LP_002",
+    "name": "Ladepunkt 002",
+    "status": "offline",
+    "power": 2.4
+  },
+  {
+    "id": "LP_003",
+    "name": "Ladepunkt 003",
+    "status": "error",
+    "power": 3.6
+  },
+  {
+    "id": "LP_004",
+    "name": "Ladepunkt 004",
+    "status": "idle",
+    "power": 4.8
+  },
+  {
+    "id": "LP_005",
+    "name": "Ladepunkt 005",
+    "status": "charging",
+    "power": 6.0
+  },
+  {
+    "id": "LP_006",
+    "name": "Ladepunkt 006",
+    "status": "offline",
+    "power": 7.2
+  },
+  {
+    "id": "LP_007",
+    "name": "Ladepunkt 007",
+    "status": "error",
+    "power": 0.0
+  },
+  {
+    "id": "LP_008",
+    "name": "Ladepunkt 008",
+    "status": "idle",
+    "power": 1.2
+  },
+  {
+    "id": "LP_009",
+    "name": "Ladepunkt 009",
+    "status": "charging",
+    "power": 2.4
+  },
+  {
+    "id": "LP_010",
+    "name": "Ladepunkt 010",
+    "status": "offline",
+    "power": 3.6
+  },
+  {
+    "id": "LP_011",
+    "name": "Ladepunkt 011",
+    "status": "error",
+    "power": 4.8
+  },
+  {
+    "id": "LP_012",
+    "name": "Ladepunkt 012",
+    "status": "idle",
+    "power": 6.0
+  },
+  {
+    "id": "LP_013",
+    "name": "Ladepunkt 013",
+    "status": "charging",
+    "power": 7.2
+  },
+  {
+    "id": "LP_014",
+    "name": "Ladepunkt 014",
+    "status": "offline",
+    "power": 0.0
+  },
+  {
+    "id": "LP_015",
+    "name": "Ladepunkt 015",
+    "status": "error",
+    "power": 1.2
+  },
+  {
+    "id": "LP_016",
+    "name": "Ladepunkt 016",
+    "status": "idle",
+    "power": 2.4
+  },
+  {
+    "id": "LP_017",
+    "name": "Ladepunkt 017",
+    "status": "charging",
+    "power": 3.6
+  },
+  {
+    "id": "LP_018",
+    "name": "Ladepunkt 018",
+    "status": "offline",
+    "power": 4.8
+  },
+  {
+    "id": "LP_019",
+    "name": "Ladepunkt 019",
+    "status": "error",
+    "power": 6.0
+  },
+  {
+    "id": "LP_020",
+    "name": "Ladepunkt 020",
+    "status": "idle",
+    "power": 7.2
+  },
+  {
+    "id": "LP_021",
+    "name": "Ladepunkt 021",
+    "status": "charging",
+    "power": 0.0
+  },
+  {
+    "id": "LP_022",
+    "name": "Ladepunkt 022",
+    "status": "offline",
+    "power": 1.2
+  },
+  {
+    "id": "LP_023",
+    "name": "Ladepunkt 023",
+    "status": "error",
+    "power": 2.4
+  },
+  {
+    "id": "LP_024",
+    "name": "Ladepunkt 024",
+    "status": "idle",
+    "power": 3.6
+  },
+  {
+    "id": "LP_025",
+    "name": "Ladepunkt 025",
+    "status": "charging",
+    "power": 4.8
+  },
+  {
+    "id": "LP_026",
+    "name": "Ladepunkt 026",
+    "status": "offline",
+    "power": 6.0
+  },
+  {
+    "id": "LP_027",
+    "name": "Ladepunkt 027",
+    "status": "error",
+    "power": 7.2
+  },
+  {
+    "id": "LP_028",
+    "name": "Ladepunkt 028",
+    "status": "idle",
+    "power": 0.0
+  },
+  {
+    "id": "LP_029",
+    "name": "Ladepunkt 029",
+    "status": "charging",
+    "power": 1.2
+  },
+  {
+    "id": "LP_030",
+    "name": "Ladepunkt 030",
+    "status": "offline",
+    "power": 2.4
+  },
+  {
+    "id": "LP_031",
+    "name": "Ladepunkt 031",
+    "status": "error",
+    "power": 3.6
+  },
+  {
+    "id": "LP_032",
+    "name": "Ladepunkt 032",
+    "status": "idle",
+    "power": 4.8
+  },
+  {
+    "id": "LP_033",
+    "name": "Ladepunkt 033",
+    "status": "charging",
+    "power": 6.0
+  },
+  {
+    "id": "LP_034",
+    "name": "Ladepunkt 034",
+    "status": "offline",
+    "power": 7.2
+  },
+  {
+    "id": "LP_035",
+    "name": "Ladepunkt 035",
+    "status": "error",
+    "power": 0.0
+  },
+  {
+    "id": "LP_036",
+    "name": "Ladepunkt 036",
+    "status": "idle",
+    "power": 1.2
+  },
+  {
+    "id": "LP_037",
+    "name": "Ladepunkt 037",
+    "status": "charging",
+    "power": 2.4
+  },
+  {
+    "id": "LP_038",
+    "name": "Ladepunkt 038",
+    "status": "offline",
+    "power": 3.6
+  },
+  {
+    "id": "LP_039",
+    "name": "Ladepunkt 039",
+    "status": "error",
+    "power": 4.8
+  },
+  {
+    "id": "LP_040",
+    "name": "Ladepunkt 040",
+    "status": "idle",
+    "power": 6.0
+  },
+  {
+    "id": "LP_041",
+    "name": "Ladepunkt 041",
+    "status": "charging",
+    "power": 7.2
+  },
+  {
+    "id": "LP_042",
+    "name": "Ladepunkt 042",
+    "status": "offline",
+    "power": 0.0
+  },
+  {
+    "id": "LP_043",
+    "name": "Ladepunkt 043",
+    "status": "error",
+    "power": 1.2
+  },
+  {
+    "id": "LP_044",
+    "name": "Ladepunkt 044",
+    "status": "idle",
+    "power": 2.4
+  },
+  {
+    "id": "LP_045",
+    "name": "Ladepunkt 045",
+    "status": "charging",
+    "power": 3.6
+  },
+  {
+    "id": "LP_046",
+    "name": "Ladepunkt 046",
+    "status": "offline",
+    "power": 4.8
+  },
+  {
+    "id": "LP_047",
+    "name": "Ladepunkt 047",
+    "status": "error",
+    "power": 6.0
+  },
+  {
+    "id": "LP_048",
+    "name": "Ladepunkt 048",
+    "status": "idle",
+    "power": 7.2
+  },
+  {
+    "id": "LP_049",
+    "name": "Ladepunkt 049",
+    "status": "charging",
+    "power": 0.0
+  },
+  {
+    "id": "LP_050",
+    "name": "Ladepunkt 050",
+    "status": "offline",
+    "power": 1.2
+  }
+]

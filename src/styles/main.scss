@@ -1,0 +1,65 @@
+/* ========== 设计系统：语义化 CSS 变量 ========== */
+:root {
+  --bg: #f6f7f9;
+  --fg: #1c1f23;
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.06);
+  --border: #E5E9EF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --fg: #e5e7eb;
+    --card-bg: #161a22;
+    --muted: #9aa2b2;
+    --primary: #60a5fa;
+    --shadow-sm: 0 1px 4px rgba(0,0,0,.35);
+    --border: #2a3342;
+  }
+}
+
+/* 强制暗色：按钮切换时只需切 html.dark */
+html.dark {
+  --bg: #0f1115;
+  --fg: #e5e7eb;
+  --card-bg: #161a22;
+  --muted: #9aa2b2;
+  --primary: #60a5fa;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.35);
+  --border: #2a3342;
+}
+
+* { box-sizing: border-box; }
+html, body, #app { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
+}
+
+/* 通用卡片与按钮 */
+.card {
+  background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+.btn {
+  padding: 8px 12px; border-radius: 8px; cursor: pointer; border:1px solid var(--border);
+  background: transparent; color: var(--fg);
+}
+.btn-primary {
+  background: var(--primary); color: #fff; border-color: transparent;
+}
+
+/* 响应式断点工具（可按需扩展） */
+@media (max-width: 1100px) {
+  .charts { grid-template-columns: repeat(2, minmax(280px, 1fr)) !important; }
+}
+@media (max-width: 740px) {
+  .charts { grid-template-columns: 1fr !important; }
+  .device-table .desc { display: none; } /* 窄屏隐藏“描述”列 */
+}
