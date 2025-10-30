@@ -83,7 +83,12 @@ const page = computed(() => Number(route.query.page || 1));
 const pageSize = computed(() => Number(route.query.pageSize || 10));
 
 function updateQuery(k: string, v: string | number) {
-  router.replace({ query: { ...route.query, [k]: String(v) } });
+  const newQuery: any = { ...route.query, [k]: String(v) };
+  // Reset to page 1 when filter or search changes
+  if (k === 'status' || k === 'q') {
+    newQuery.page = '1';
+  }
+  router.replace({ query: newQuery });
 }
 
 // --- 3. 归一化函数 ---
@@ -99,18 +104,22 @@ function normalize(s: string) {
 // --- 4. 数据过滤 ---
 const filtered = computed(() => {
   if (!devices.value.length) return [];
-  const qn = normalize(query.value);
+  const qn = normalize(query.value || '');
   return devices.value.filter((d: any) => {
+    // 1) 状态过滤
     const okStatus =
       status.value === 'all'
         ? true
-        : (d.status ?? '').toLowerCase() === status.value.toLowerCase();
+        : normalize(d.status ?? '') === normalize(status.value ?? '');
     if (!okStatus) return false;
+    
+    // 2) 搜索过滤 - 如果没有搜索词，则全部通过
     if (!qn) return true;
-    const text = normalize(
-      (d.name ?? '') + ' ' + (d.description ?? '') + ' ' + (d.id ?? '')
-    );
-    return text.includes(qn);
+    
+    // 3) 在 name 和 id 中搜索
+    const name = normalize(d.name ?? '');
+    const id = normalize(d.id ?? '');
+    return name.includes(qn) || id.includes(qn);
   });
 });
 

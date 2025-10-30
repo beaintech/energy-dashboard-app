@@ -9,6 +9,7 @@
   --border: #E5E9EF;
 }
 
+// 默认跟随系统的 prefers-color-scheme，并提供 html.dark 强制暗色。
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f1115;
