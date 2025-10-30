@@ -15,7 +15,7 @@
       @update:status="v => updateQuery('status', v)"
     />
     <DeviceTable
-      :devices="devices"
+      :devices="paged"
       :filter="status"
       :total="total"
       :page="page"
