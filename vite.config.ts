@@ -3,12 +3,12 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path';
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [vue()],
-  base: '/energy-dashboard-app/',
+  base: command === 'build' ? '/energy-dashboard-app/' : '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
-})
+}))

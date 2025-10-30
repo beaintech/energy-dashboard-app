@@ -104,17 +104,24 @@ export const devices: Module<DevicesState, unknown> = {
         */
       const [d, g, l, p] = await Promise.all([
         axios.get<Device[]>('/api/devices.json'),
-        axios.get<Array<{ timestamp: number; value: number }>>('/api/grid.json'),
-        axios.get<Array<{ timestamp: number; value: number }>>('/api/load.json'),
-        axios.get<Array<{ timestamp: number; value: number }>>('/api/pv.json'),
+        axios.get<Array<{ ts: string; val: number }>>('/api/grid.json'),
+        axios.get<Array<{ ts: string; val: number }>>('/api/load.json'),
+        axios.get<Array<{ ts: string; val: number }>>('/api/pv.json'),
       ]);
+
+      // Transform data from JSON format to expected format
+      const transformData = (data: Array<{ ts: string; val: number }>) =>
+        data.map(item => ({
+          timestamp: new Date(item.ts).getTime(),
+          value: item.val
+        }));
 
       commit('setSnapshot', {
         // 如果本地有缓存过的新设备，就用缓存；否则用 mock
         d: cachedDevices ? JSON.parse(cachedDevices) : d.data,
-        g: g.data,
-        l: l.data,
-        p: p.data,
+        g: transformData(g.data),
+        l: transformData(l.data),
+        p: transformData(p.data),
       });
     },
 

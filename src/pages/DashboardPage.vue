@@ -123,24 +123,14 @@ const filtered = computed(() => {
   });
 });
 
-// --- 5. 排序 + 分页 ---
-const sorted = computed(() => {
-  const weight = (s: string) =>
-    s === 'charging' ? 0 : s === 'idle' ? 1 : s === 'offline' ? 2 : 3;
-  return [...filtered.value].sort((a: any, b: any) => {
-    const dw = weight(a.status ?? '') - weight(b.status ?? '');
-    if (dw !== 0) return dw;
-    return String(a.name ?? '').localeCompare(String(b.name ?? ''));
-  });
-});
-
-const total = computed(() => sorted.value.length);
+// --- 5. 分页 ---
+const total = computed(() => filtered.value.length);
 
 const paged = computed(() => {
-  if (!sorted.value.length) return [];
+  if (!filtered.value.length) return [];
   const p = page.value < 1 ? 1 : page.value;
   const start = (p - 1) * pageSize.value;
-  return sorted.value.slice(start, start + pageSize.value);
+  return filtered.value.slice(start, start + pageSize.value);
 });
 
 // --- 6. 核心修复点 #2：确保 devices 一加载完自动触发重新计算分页 ---
